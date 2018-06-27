@@ -1,18 +1,20 @@
 html{
-    font-size: 62.5%;
+    font-size: 100%;
 }
 
 div.scrollmenu {
     background-color: #333;
     overflow: auto;
     white-space: nowrap;
+    position: relative;
+    z-index: 99;
 }
 
 div.scrollmenu a {
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 60px;
+    padding: 1rem;
     text-decoration: none;
 }
 

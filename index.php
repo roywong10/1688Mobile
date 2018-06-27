@@ -8,18 +8,13 @@
     <div class="page-group">
         <!-- 单个page ,第一个.page默认被展示-->
         <div class="page page-current">
-            <!-- 标题栏 -->
-            <header class="bar bar-nav">
-                <a class="icon icon-me pull-left open-panel"></a>
-                <h1 class="title">标题</h1>
-            </header>
-            
+
             <!-- Scroll Menu -->
-            <?php include 'menu.php'; ?> 
+            <?php include 'parts/menu.php'; ?>
            
 
             <!-- 工具栏 -->
-            <?php include 'tabs.php'; ?> 
+<!--            --><?php //include 'parts/tabs.php'; ?>
             <!-- 这里是页面内容区 -->
 
             <div class="content">
@@ -27,7 +22,7 @@
                     <p><a href="#" class="open-about">Open About Popup </a></p>
                 </div>
                 <div class="content-block">
-                    <?php include 'headline.php'; ?>
+                    <?php include 'parts/headline.php'; ?>
                 </div>
 
             </div>
@@ -38,7 +33,7 @@
     </div>
 
     <!-- popup, panel 等放在这里 -->
-    <?php include 'content-popup.php'; ?>
+    <?php include 'parts/content-popup.php'; ?>
     <div class="panel-overlay">
 
     </div>
