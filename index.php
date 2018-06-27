@@ -13,12 +13,15 @@
                 <a class="icon icon-me pull-left open-panel"></a>
                 <h1 class="title">标题</h1>
             </header>
-
+            
+            <!-- Scroll Menu -->
+            <?php include 'menu.php'; ?> 
+           
 
             <!-- 工具栏 -->
-
-            <?php include 'tabs.php'; ?>
+            <?php include 'tabs.php'; ?> 
             <!-- 这里是页面内容区 -->
+
             <div class="content">
                 <div class="content-block">
                     <p><a href="#" class="open-about">Open About Popup </a></p>
