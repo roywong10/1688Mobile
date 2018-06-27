@@ -1,0 +1,11 @@
+# Git Files for eb cli
+.git/*
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+wp-content/cache/**
+.idea/**
+**/.DS_Store/**
+.DS_Store/**
