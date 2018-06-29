@@ -1,23 +1,78 @@
 html{
     font-size: 100%;
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+body{
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
 }
 
 div.scrollmenu {
-    background-color: #333;
+    background-color: white;
     overflow: auto;
     white-space: nowrap;
     position: relative;
     z-index: 99;
+    height: 2.5rem;
 }
 
 div.scrollmenu a {
     display: inline-block;
-    color: white;
+    color: black;
     text-align: center;
-    padding: 1rem;
+    padding: 0 1.2rem;
+    line-height: 2.5rem;
     text-decoration: none;
 }
 
 div.scrollmenu a:hover {
     background-color: #777;
 }
+
+.infinite-scroll-preloader {
+    margin-top:-20px;
+}
+.content {
+    top: 2.5rem;
+}
+.main-carousel{
+    height: 56vw;
+}
+
+    .main-carousel div.img-layer {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-carousel div.img-layer img{
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+    }
+    .main-carousel button.flickity-button{
+        display: none;
+    }
+    .main-carousel .text-area {
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        padding: 1rem 0.5rem 0.3rem 0.5rem;
+        width: 100%;
+        background: rgba(86,151,255,0) url("assets/images/carousel-background.png") no-repeat;
+        background-size: 100% 100%;
+        /*background-image: linear-gradient(to top, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.77) 25%, rgba(0, 0, 0, 0.41) 50%,rgba(0, 0, 0, 0.22) 70%, transparent);*/
+    }
+    .main-carousel .text-area span {
+        width:80%;
+        color: white;
+        font-size: 0.8rem;
+        letter-spacing: 0.06rem;
+    }
+

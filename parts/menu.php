@@ -1,19 +1,19 @@
 
 <div class="scrollmenu">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a href="#support">Support</a>
-  <a href="#blog">Blog</a>
-  <a href="#tools">Tools</a>  
-  <a href="#base">Base</a>
-  <a href="#custom">Custom</a>
-  <a href="#more">More</a>
-  <a href="#logo">Logo</a>
-  <a href="#friends">Friends</a>
-  <a href="#partners">Partners</a>
-  <a href="#people">People</a>
+  <a href="#home">推荐</a>
+  <a href="#news">全澳</a>
+  <a href="#contact">悉尼</a>
+  <a href="#about">墨尔本</a>
+  <a href="#support">布里斯班</a>
+  <a href="#blog">视频</a>
+  <a href="#tools">财经</a>
+  <a href="#base">房产</a>
+  <a href="#custom">国际</a>
+  <a href="#more">中国</a>
+  <a href="#logo">港澳台</a>
+  <a href="#friends">娱乐</a>
+  <a href="#partners">体育</a>
+  <a href="#people">时尚</a>
   <a href="#work">Work</a>
 </div>
 

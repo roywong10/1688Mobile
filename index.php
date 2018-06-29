@@ -17,14 +17,20 @@
 <!--            --><?php //include 'parts/tabs.php'; ?>
             <!-- 这里是页面内容区 -->
 
-            <div class="content">
-                <div class="content-block">
-                    <p><a href="#" class="open-about">Open About Popup </a></p>
+            <!-- 添加 class infinite-scroll 和 data-distance  向下无限滚动可不加infinite-scroll-bottom类，这里加上是为了和下面的向上无限滚动区分-->
+            <div class="content infinite-scroll infinite-scroll-bottom" data-distance="300">
+                <div class="content-block no-padding no-margin">
+                    <?php include 'parts/carousel-banner.php'; ?>
                 </div>
-                <div class="content-block">
-                    <?php include 'parts/headline.php'; ?>
-                </div>
+                <div class="list-block" style="margin-top: 0">
+                    <ul class="list-container">
 
+                    </ul>
+                </div>
+                <!-- 加载提示符 -->
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
             </div>
         </div>
 
@@ -48,9 +54,13 @@
     </div>
 
 </div>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
 <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+<script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <script>
 
