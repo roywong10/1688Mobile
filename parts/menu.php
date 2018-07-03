@@ -1,7 +1,7 @@
 
 <div class="scrollmenu">
-  <a href="#home">推荐</a>
-  <a href="#news">全澳</a>
+  <a href="#home">主页</a>
+  <a href="#australia">全澳</a>
   <a href="#contact">悉尼</a>
   <a href="#about">墨尔本</a>
   <a href="#support">布里斯班</a>

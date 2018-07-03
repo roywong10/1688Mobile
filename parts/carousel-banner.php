@@ -1,6 +1,6 @@
 <!-- Flickity HTML init -->
-<div class="main-carousel"
-     data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true }'>
+<div class="img-carousel"
+     data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "prevNextButtons": false, "pageDots": false, "wrapAround": true }'>
     <div class="img-layer">
         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" alt="orange tree" />
         <div class="text-area">
