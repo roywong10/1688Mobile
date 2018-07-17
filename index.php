@@ -27,14 +27,14 @@
 
     </div>
     <!-- Left Panel with Reveal effect -->
-    <div class="panel panel-left panel-reveal">
-        <div class="content-block">
-            <p>这是一个侧栏</p>
-            <p></p>
-            <!-- Click on link with "close-panel" class will close panel -->
-            <p><a href="#" class="close-panel">关闭</a></p>
-        </div>
-    </div>
+<!--    <div class="panel panel-left panel-reveal">-->
+<!--        <div class="content-block">-->
+<!--            <p>这是一个侧栏</p>-->
+<!--            <p></p>-->
+<!--            <!-- Click on link with "close-panel" class will close panel -->-->
+<!--            <p><a href="#" class="close-panel">关闭</a></p>-->
+<!--        </div>-->
+<!--    </div>-->
 
 </div>
 <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
@@ -44,6 +44,7 @@
 <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
 <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script type="text/javascript" src="assets/js/scripts.js" charset='utf-8'></script>
 
 <script>
 
