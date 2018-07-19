@@ -11,13 +11,14 @@
     <div class="content-block no-padding no-margin">
         <?php include dirname(__FILE__).'/carousel-banner.php'; ?>
     </div>
-    <div class="list-block" style="margin-top: 0">
-        <ul class="list-container">
 
-        </ul>
+    <div class="list-block" style="margin-top: 0">
+        <div class="list-container" style="padding-bottom: 3rem">
+
+        </div>
     </div>
     <!-- 加载提示符 -->
-    <div class="infinite-scroll-preloader">
+    <div class="infinite-scroll-preloader" style="margin-top: -4.5rem">
         <div class="preloader"></div>
     </div>
 </div>

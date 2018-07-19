@@ -1,18 +1,18 @@
-html{
-    font-size: 100%;
-    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
-}
-body{
+html, body{
+    font-size: 62.5%;
     font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 }
 
 .page-group{
-    top: 2.5rem!important;
-    z-index: 1;
+    top: 2.2rem!important;
 }
 
 .no-padding {
     padding: 0;
+}
+
+.no-display {
+    display: none;
 }
 
 .no-margin {
@@ -23,24 +23,63 @@ div.scrollmenu {
     background-color: white;
     overflow: auto;
     white-space: nowrap;
-    position: absolute;
-    width:100%;
-    z-index: 2;
-    height: 2.5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 2002;
+    top:0;
+    left: 0;
+    height: 2.2rem;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 6px;
 }
 
-div.scrollmenu a {
+div.scrollmenu a.menu-pills {
     display: inline-block;
-    color: black;
     text-align: center;
-    padding: 0 1.2rem;
-    line-height: 2.5rem;
+    padding: 0 0.75rem;
+    line-height: 2.2rem;
     text-decoration: none;
+    color: black;
 }
 
-div.scrollmenu a:hover {
-    background-color: #777;
+div.scrollmenu a.menu-pills.active {
+    color: coral;
+    font-weight: bold;
 }
+
+div.scrollmenu-sub {
+    margin-top: 2.2rem;
+    position: relative;
+    width: 100%;
+    padding:0 1%;
+}
+
+div.scrollmenu-sub a.menu-pills{
+    height: 1.8rem;
+    line-height: 1.8rem!important;
+    padding: 0!important;
+    float: left;
+    width: 23%;
+    margin: 0.3rem 1% ;
+    border-radius: 0.25rem;
+    background-color: aliceblue;
+}
+div.scrollmenu-sub span.dummy {
+    display: none;
+}
+
+div.scrollmenu .button{
+    position: fixed;
+    border: 0;
+    right: -2px;
+    height: 2.2rem;
+    width: 2.2rem;
+    top: 0;
+    background: white;
+    background-size: 100% 100%;
+}
+
+
+
 
 .infinite-scroll-preloader {
     margin-top:-20px;
