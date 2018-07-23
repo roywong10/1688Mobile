@@ -5,9 +5,13 @@
 </head>
 <body>
 
-<div class="main-layer">
-<!-- scroll menu   -->
+<header>
     <?php include 'parts/menu.php'; ?>
+</header>
+<div class=" main-layer">
+<!-- scroll menu   -->
+
+
     <div class="page-group">
         <!-- 单个page ,第一个.page默认被展示-->
         <div id="home" class="page page-current">
@@ -36,7 +40,9 @@
     </div>
 
     <!-- popup, panel 等放在这里 -->
-    <?php include 'parts/content-popup.php'; ?>
+    <div class="popup popup-content" style="top: -2.2rem; background: #efeff4">
+        <?php include dirname(__FILE__) . '/parts/post-popup.php'; ?>
+    </div>
 
 </div>
 <?php include 'footer.php' ?>

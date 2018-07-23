@@ -8,7 +8,7 @@
 ?>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>我的生活</title>
+<title>1688澳洲新闻网 - 澳洲中文网</title>
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 <link rel="shortcut icon" href="/favicon.ico">
 <meta name="apple-mobile-web-app-capable" content="yes">

@@ -1,5 +1,6 @@
 var ajax_in_progress = false;
 
+console.log($.device);
 
 
 function open_meun () {
@@ -31,6 +32,16 @@ function smoothScroll(el, to, duration) {
 }
 
 
+$(document).on("click", ".post-comment-input", function () {
+    $(".post-textarea").removeClass('no-display');
+    $(".post-comment-textarea").focus();
+});
+
+$(document).on("click", ".post-textarea .cancel", function () {
+    $(".post-textarea").addClass('no-display');
+});
+
+
 $(document).on("click", ".scrollmenu .tab-button", function () {
     if(!$(this).hasClass("active")){
         open_meun();
@@ -57,8 +68,8 @@ $(document).on('click', '.menu-pills', function () {
 
 $(document).on("pageInit", function(){
 
-    $(document).on('click','.open-about', function () {
-        $.popup('.popup-about');
+    $(document).on('click','.open-content-popup', function () {
+        $.popup('.popup-content');
     });
 });
 
@@ -83,28 +94,28 @@ function addItems(ele,number, lastIndex) {
             console.log(data[0]['title']);
             var html = '';
 
-            for (var i = 0; i < data.length; i++) {
-                html += '<div class="card">' +
-                    '            <div class="card-content">' +
+            for (var i = 0; i < number; i++) {
+                html += '<div class="card costume-card-1">' +
+                    '            <div class="card-content open-content-popup">' +
                     '                <div class="list-block media-list">' +
-                    '                    <ul>\n' +
+                    '                    <ul>' +
                     '                        <li class="item-content">' +
                     '                            <div class="item-media">' +
-                    '                                <img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" width="44">' +
+                    '                                <img src="https://australiatoday.com/wp-content/uploads/2018/07/18072201015b534abd3cd88-1-280x210.jpg">' +
                     '                            </div>' +
                     '                            <div class="item-inner">' +
                     '                                <div class="item-title-row">' +
-                    '                                    <div class="item-title">标题' + data[i]['title'] + '</div>' +
-                    '                                </div>\n' +
-                    '                                <div class="item-subtitle">' + data[i]['text'] + '</div>' +
+                    '                                    <div class="item-title">这是个标题这是个标题这是个标题这是个标题这是个标题这是个标题' + data[i]['title'] + '</div>' +
+                    '                                </div>' +
+                    '                                <div class="item-subcontent">' +
+                    '                                     <span>1688新闻网</span>&nbsp;' +
+                    '                                     <span>2小时前</span>' +
+                    '                                     <span class="pull-right">5条评论</span>' +
+                    '                                 </div>' +
                     '                            </div>' +
                     '                        </li>' +
                     '                    </ul>' +
                     '                </div>' +
-                    '            </div>' +
-                    '            <div class="card-footer">' +
-                    '                <span>2015/01/15</span>' +
-                    '                <span>5 评论</span>' +
                     '            </div>' +
                     '        </div>'
                 // html += '<li class="item-content"><div class="item-inner"><a href="#" class="open-about"><div class="item-title">Item ' + i + '</div></a></div></li>';
