@@ -2,6 +2,14 @@ var ajax_in_progress = false;
 
 console.log($.device);
 
+// window.location.href.split('#')[0];
+
+removeHash();
+
+function removeHash () {
+    history.pushState("", document.title, window.location.pathname
+        + window.location.search);
+}
 
 function open_meun () {
     $(".scrollmenu .tab-button svg").animate({rotateZ: '45deg'}, 400, 'ease-out');
@@ -81,44 +89,40 @@ $(document).on('ajaxStop', function(){
     ajax_in_progress = false;
 });
 
-function addItems(ele,number, lastIndex) {
+function addItems(ele,number, lastId) {
     // 生成新条目的HTML
     var baseUrl = document.location.origin;
     $.ajax({
+        async : false,
         type: 'GET',
-        url: baseUrl+'/AJAX/get-data.php',
+        url: baseUrl+'/AJAX/get-data.php?' + 'id=' + lastId + '&num=' + number + '&rid=' + Math.random(),
         // type of data we are expecting in return:
         dataType: 'json',
-        timeout: 300,
+        timeout: 3000,
         success: function(data){
-            console.log(data[0]['title']);
+            var url = '';
             var html = '';
-
-            for (var i = 0; i < number; i++) {
-                html += '<div class="card costume-card-1">' +
-                    '            <div class="card-content open-content-popup">' +
-                    '                <div class="list-block media-list">' +
-                    '                    <ul>' +
-                    '                        <li class="item-content">' +
-                    '                            <div class="item-media">' +
-                    '                                <img src="https://australiatoday.com/wp-content/uploads/2018/07/18072201015b534abd3cd88-1-280x210.jpg">' +
-                    '                            </div>' +
-                    '                            <div class="item-inner">' +
-                    '                                <div class="item-title-row">' +
-                    '                                    <div class="item-title">这是个标题这是个标题这是个标题这是个标题这是个标题这是个标题' + data[i]['title'] + '</div>' +
-                    '                                </div>' +
-                    '                                <div class="item-subcontent">' +
-                    '                                     <span>1688新闻网</span>&nbsp;' +
-                    '                                     <span>2小时前</span>' +
-                    '                                     <span class="pull-right">5条评论</span>' +
-                    '                                 </div>' +
-                    '                            </div>' +
-                    '                        </li>' +
-                    '                    </ul>' +
-                    '                </div>' +
-                    '            </div>' +
-                    '        </div>'
-                // html += '<li class="item-content"><div class="item-inner"><a href="#" class="open-about"><div class="item-title">Item ' + i + '</div></a></div></li>';
+            for (var i = 0; i < data.length; i++) {
+                url =  baseUrl + '/AJAX/card.php?' + 'id=' + data[i]['id'] ;
+                url = url + '&type=1';
+                url = url + '&title=' + data[i]['title'];
+                url = url + '&origin=' + data[i]['origin'];
+                url = url + '&date=' + data[i]['date'];
+                url = url + '&views=' + data[i]['views'];
+                url = url + '&author=' + data[i]['author'];
+                url = url + '&rid=' + Math.random();
+                $.ajax({
+                    async : false,
+                    type: 'GET',
+                    url: url,
+                    timeout: 300,
+                    success: function(data2){
+                        html += data2;
+                    },
+                    error: function(xhr, type){
+                        console.log('Ajax error!');
+                    }
+                });
             }
             // 添加新条目
             ele.find('.infinite-scroll-bottom .list-container').append(html);
@@ -155,6 +159,7 @@ $(".page-group>.page").on("pageInit", function () {
         addItems($(this),itemsPerLoad, 0);
     }
     var lastIndex = $(this).find('.list-container .card').length;
+    var lastId = parseInt($(this).find('.list-container>.card:nth-last-of-type(1)').attr('title').split('-')[1]);
     //文档专用事件 updateContent
 
     var that = $(this);
@@ -168,6 +173,7 @@ $(".page-group>.page").on("pageInit", function () {
         // 设置flag
         loading = true;
         lastIndex = $(this).find('.list-container .card').length;
+        lastId = parseInt($(this).find('.list-container>.card:nth-last-of-type(1)').attr('title').split('-')[1]);
         // 模拟1s的加载过程
         setTimeout(function() {
             // 重置加载flag
@@ -182,14 +188,9 @@ $(".page-group>.page").on("pageInit", function () {
             }
 
             // 添加新条目
-            addItems($(this), itemsPerLoad, lastIndex);
-            // 更新最后加载的序号
-
-            lastIndex = $(this).find('.list-container .card').length;
-            // console.log(lastIndex);
-            //容器发生改变,如果是js滚动，需要刷新滚动
+            addItems($(this), itemsPerLoad, lastId);
             $.refreshScroller();
-        }.bind(that), 100);
+        }.bind(that), 10);
 
     });
 });

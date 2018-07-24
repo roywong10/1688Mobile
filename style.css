@@ -1,6 +1,7 @@
 html, body{
     font-size: 16px;
     font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif!important;
+    letter-spacing: .08rem;
 }
 
 
@@ -26,6 +27,10 @@ a {
 
 .no-margin {
     margin: 0;
+}
+
+.bar {
+    background-color: #fdfdfd;
 }
 
 div.scrollmenu {
@@ -128,6 +133,9 @@ div.scrollmenu .button{
         letter-spacing: 0.06rem;
     }
 
+.post.content {
+    padding-bottom: 3rem;
+}
 .post .post-card {
     width: 100%;
     background-color: white;
@@ -158,6 +166,13 @@ div.scrollmenu .button{
     box-shadow: unset;
 }
 
+.costume-card-1.card .item-views {
+    display: block;
+    background-color: #f1f1f1;
+    border-radius: .2rem;
+    padding: .1rem .25rem;
+}
+
 .costume-card-1 .item-title-row {
     min-height: 2.9rem;
 }
@@ -175,6 +190,9 @@ div.scrollmenu .button{
 .costume-card-1 .item-media img {
     width: 5rem;
     max-height: 3.75rem;
+    background: #eee url("assets/images/img-background.png") no-repeat;
+    background-position: center;
+    background-size: 1.6rem 1.6rem;
 }
 
 .costume-card-1 .item-title {
@@ -208,8 +226,11 @@ div.scrollmenu .button{
     border-radius: 0.15rem;
     top: 0;
     position: relative;
-    border: 1px solid #e7e7e7;
-    font-size: .8rem;
+    border: 0;
+    background-color: #f1f1f1;
+    color: #a8abb0;
+    font-size: .73rem;
+    font-weight: 600;
     width: 55%;
     padding-left: .3rem;
 }

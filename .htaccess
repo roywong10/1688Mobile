@@ -1,0 +1,30 @@
+Options +FollowSymLinks -MultiViews
+
+#<Files ~ "^\.json|\.js">
+ # Deny from all
+#</Files>
+
+#<directoryMatch "^.*\/AJAX$">
+#require all denied
+#require host localhost
+#require ip 127.0.0.1
+#</directoryMatch>
+
+<FilesMatch "\.(json|tmp|txt)$">
+require all denied
+require host localhost
+require ip 127.0.0.1
+</FilesMatch>
+
+
+
+RewriteEngine On
+RewriteRule ^index\.php.*$ / [L,R=301]
+
+#RewriteEngine on
+#RedirectMatch 301 ^(.*?)(?:\/[\d]{5})\-(.*)$ $1/$2
+
+
+
+
+
