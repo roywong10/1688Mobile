@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="font-size: 16px">
 <head>
     <?php include 'header.php' ?>
 </head>
@@ -37,10 +37,34 @@
         <div id="finance" class="page">
             <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
         </div>
+        <div id="realestate" class="page">
+            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
+        </div>
+        <div id="national" class="page">
+            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
+        </div>
+        <div id="china" class="page">
+            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
+        </div>
+        <div id="hongkong" class="page">
+            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
+        </div>
+        <div id="entertainment" class="page">
+            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
+        </div>
+        <div id="sport" class="page">
+            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
+        </div>
+        <div id="fashion" class="page">
+            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
+        </div>
+        <div id="work" class="page">
+            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
+        </div>
     </div>
 
     <!-- popup, panel 等放在这里 -->
-    <div class="popup popup-content" style="top: -2.2rem; background: #efeff4">
+    <div class="popup popup-content">
         <?php include dirname(__FILE__) . '/parts/post-popup.php'; ?>
     </div>
 

@@ -2,13 +2,19 @@
 
 <header class="bar bar-nav">
     <a href="#" class="icon icon-left pull-left close-popup"></a>
+    <a class="pull-right icon right-switch open-popup-options">
+<!--        <embed  src="assets/images/icons/switch.svg">-->
+    </a>
     <a class="pull-right post-comment-top">7条评论</a>
+
     <h1 class="title"></h1>
 </header>
 <div class="content post">
     <div class="post-card">
 
-        <h3>悉尼今天天气晴，局部有阵雨，偏东风3到4级，请大家多穿衣服，早收被子</h3>
+
+
+        <h3>这是一个标题这是一个标题这是一个标题这是一个标题</h3>
         <div>
             <span class="post-author">author</span>&nbsp;&nbsp;&nbsp;
             <span class="post-origin">来源：1688</span>
@@ -46,82 +52,65 @@
         </div>
     </div>
 
-    <div class="post-card">
+    <div class="post-card related-posts">
         <div class="post-card-title">相关新闻</div>
-        <div class="card costume-card-1">
-            <div class="card-content open-content-popup">
-                <div class="list-block media-list">
-                    <ul>
-                        <li class="item-content">
-                            <div class="item-media">
-                                <img src="https://australiatoday.com/wp-content/uploads/2018/07/18072201015b534abd3cd88-1-280x210.jpg">
-                            </div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">这是个标题这是个标题这是个标题这是个标题这是个标题这是个标题</div>
-                                </div>
-                                <div class="item-subcontent">
-                                    <span>1688新闻网</span>&nbsp;
-                                    <span>2小时前</span>
-                                    <span class="pull-right">5条评论</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="card costume-card-1">
-            <div class="card-content open-content-popup">
-                <div class="list-block media-list">
-                    <ul>
-                        <li class="item-content">
-                            <div class="item-media">
-                                <img src="https://australiatoday.com/wp-content/uploads/2018/07/18072201015b534abd3cd88-1-280x210.jpg">
-                            </div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">这是个标题这是个标题这是个标题这是个标题这是个标题这是个标题</div>
-                                </div>
-                                <div class="item-subcontent">
-                                    <span>1688新闻网</span>&nbsp;
-                                    <span>2小时前</span>
-                                    <span class="pull-right">5条评论</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="card costume-card-1">
-            <div class="card-content open-content-popup">
-                <div class="list-block media-list">
-                    <ul>
-                        <li class="item-content">
-                            <div class="item-media">
-                                <img src="https://australiatoday.com/wp-content/uploads/2018/07/18072201015b534abd3cd88-1-280x210.jpg">
-                            </div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">这是个标题这是个标题这是个标题这是个标题这是个标题这是个标题</div>
-                                </div>
-                                <div class="item-subcontent">
-                                    <span>1688新闻网</span>&nbsp;
-                                    <span>2小时前</span>
-                                    <span class="pull-right">5条评论</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
     </div>
+
+    <div class="post-card hot-comments">
+        <div class="post-card-title">热门评论</div>
+    </div>
+
 </div>
 
-<nav class="bar bar-tab">
+<div class="post-options no-display">
+    <div class="post-options-background"></div>
+    <div class="post-options-content">
+        <div class="post-option-block">
+            <p>字体大小</p>
+            <p class="buttons-row">
+                <a href="#" class="button font-size-option small" style="font-size: 14px">小</a>
+                <a href="#" class="button font-size-option mid active" style="font-size: 16px">中</a>
+                <a href="#" class="button font-size-option large" style="font-size: 18px">大</a>
+            </p>
+        </div>
+        <div class="post-option-block">
+            <p>简繁切换</p>
+            <p>
+                <a id="translateLink" class="button" href="javascript:translatePage();">简体</a>
+            </p>
+        </div>
+
+
+        <div class="post-option-block theme">
+            <p>
+            <div class="pull-left" style="height: 1.6rem; line-height: 1.5rem">黑夜模式</div>
+            <div class="pull-right">
+                <label class="label-switch" onclick="toggle_theme()" style="transform: scale(0.8,0.8);">
+                    <input type="checkbox">
+                    <div class="checkbox"></div>
+                </label>
+            </div>
+            </p>
+        </div>
+        <br>
+    </div>
+
+</div>
+
+<nav class="bar bar-tab bottm-bar">
     <input type="text" placeholder=" 发表评论" class="post-comment-input">
+    <div class="pull-right right-buttons">
+            <table>
+                <tr>
+                    <td align="center"><embed src="assets/images/icons/share_fill.svg"></td>
+                    <td align="center"><embed src="assets/images/icons/message_fill.svg"></td>
+                </tr>
+                <tr>
+                    <td align="center">分享</td>
+                    <td align="center">评论&nbsp;7</td>
+                </tr>
+            </table>
+        </div>
 </nav>
 
 <nav class="bar bar-tab post-textarea no-display">
@@ -131,7 +120,5 @@
     </div>
     <textarea rows="4" class="post-comment-textarea" autofocus></textarea>
 </nav>
-
-
 
 

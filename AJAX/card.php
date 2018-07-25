@@ -22,16 +22,16 @@ if($type == '1' && isset($_GET['id']) and isset($_GET['type']) and isset($_GET['
                 <ul>
                     <li class="item-content">
                         <div class="item-media">
-                            <img
-                                src="https://source.unsplash.com/random/<?php echo rand(); ?>">
+                            <img onload="picFadeIn(this)" style="opacity: 0"
+                                src="https://source.unsplash.com/random/<?php echo rand(); ?>" width="400" height="300">
                         </div>
                         <div class="item-inner">
                             <div class="item-title-row">
                                 <div class="item-title"><?php echo htmlspecialchars($_GET['title']); ?></div>
                             </div>
                             <div class="item-subcontent">
-                                <span class="item-origin"><?php echo htmlspecialchars($_GET['origin']); ?></span>&nbsp;
-                                <span class="item-date"><?php echo htmlspecialchars($_GET['date']); ?></span>
+                                <span class="item-date pull-left"><?php echo htmlspecialchars($_GET['date']); ?></span>
+                                <span class="item-origin pull-left"><?php echo htmlspecialchars($_GET['origin']); ?></span>&nbsp;
                                 <span class="item-views pull-right"><?php echo htmlspecialchars($_GET['views']); ?>条评论</span>
                             </div>
                         </div>
