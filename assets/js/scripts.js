@@ -249,8 +249,8 @@ $(document).on("pageInit",".main-layer .page-group>.page", function () {
 
 // functions
 function changeURL(pointer){
-    var url = pointer.attr('id');
-    window.history.pushState({},0,'http://'+window.location.host+'/mobile/'+url);
+    var pathname = pointer.attr('id');
+    window.history.pushState({},0,baseUrl+'/'+pathname);
 }
 // this function must be defined in the global scope
 window.toggle_theme = function() {
