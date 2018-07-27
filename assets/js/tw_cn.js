@@ -53,7 +53,7 @@ function translatePage()
 	{
 		currentEncoding  = 1;
 		targetEncoding = 2;
-		translateButtonObject.innerHTML = msgToTraditionalChinese;
+		// translateButtonObject.innerHTML = msgToTraditionalChinese;
 		setCookie( targetEncodingCookie, targetEncoding, 7 );
 		translateBody();
 	}
@@ -61,7 +61,7 @@ function translatePage()
 	{
 		currentEncoding  = 2;
 		targetEncoding = 1;
-		translateButtonObject.innerHTML = msgToSimplifiedChinese;
+		// translateButtonObject.innerHTML = msgToSimplifiedChinese;
 		setCookie( targetEncodingCookie, targetEncoding, 7 );
 		translateBody();
 	}
@@ -135,29 +135,29 @@ function getCookie(name)
 
 function translateInitilization()
 {
-	translateButtonObject = document.getElementById( translateButtonId );
-	if ( translateButtonObject )
-	{
-		with( translateButtonObject )
-		{
-			if(typeof(document.all)!="object")
-			{
-				href="javascript:translatePage();";
-			}
-			else
-			{
-				href="#";
-				onclick = new Function( "translatePage(); return false;");
-			}
-		}
-	
-		if ( currentEncoding != targetEncoding ) 
-		{
-			setTimeout("translateBody()",translateDelay);
-			if( targetEncoding == 1 )
-				translateButtonObject.innerHTML = msgToSimplifiedChinese;
-			else 
-				translateButtonObject.innerHTML = msgToTraditionalChinese;
-		}
-	}
+	translateButtonObject = document.getElementsByClassName( translateButtonId );
+	// if ( translateButtonObject )
+	// {
+	// 	with( translateButtonObject )
+	// 	{
+	// 		if(typeof(document.all)!="object")
+	// 		{
+	// 			href="javascript:translatePage();";
+	// 		}
+	// 		else
+	// 		{
+	// 			href="#";
+	// 			onclick = new Function( "translatePage(); return false;");
+	// 		}
+	// 	}
+	//
+	// 	// if ( currentEncoding != targetEncoding )
+	// 	// {
+	// 	// 	setTimeout("translateBody()",translateDelay);
+	// 	// 	if( targetEncoding == 1 )
+	// 	// 		translateButtonObject.innerHTML = msgToSimplifiedChinese;
+	// 	// 	else
+	// 	// 		translateButtonObject.innerHTML = msgToTraditionalChinese;
+	// 	// }
+	// }
 }

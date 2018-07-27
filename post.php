@@ -6,6 +6,11 @@
  * Time: 16:58
  */?>
 
-<?php include dirname(__FILE__).'/header.php'?>
-<?php require_once dirname(__FILE__) . '/parts/post-popup.php' ?>
+
+<?php include 'header.php' ?>
+<div class="page-group">
+    <div id="post-page" class="page">
+        <?php require_once dirname(__FILE__) . '/parts/post-popup.php' ?>
+    </div>
+</div>
 <?php include dirname(__FILE__).'/footer.php'?>

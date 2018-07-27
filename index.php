@@ -1,66 +1,70 @@
-<!DOCTYPE html>
-<html style="font-size: 16px">
-<head>
-    <?php include 'header.php' ?>
-</head>
-<body>
+<?php
+$categories = array(
+        'home' => '首页',
+    'australia' => '全澳',
+    'sydney' => '悉尼',
+    'melbourne' => '墨尔本',
+    'brisbane' => '布里斯班',
+    'video' => '视频',
+    'finance' => '金融',
+    'realestate' => '地产',
+    'national' => '国际',
+    'china' => '中国',
+    'hongkong' => '港澳台',
+    'entertainment' => '娱乐',
+    'sport' => '体育',
+    'fashion' => '时尚',
+    'column' => '专栏',
+    'event' => '活动',
+    'fresh' => '新鲜事',
+    'travel' => '旅游',
+    'food' => '美食',
+    'abroad' => '留学',
+    'migration' => '移民',
+    'health' => '健康'
+);
+
+
+$pathname = $_SERVER["REQUEST_URI"];
+$path_array = array_map('strtolower', preg_split('/(\/|\\\)/', $pathname));
+$active_category = 'home';
+//print_r($path_array);
+foreach($categories as $key => $value){
+
+    if(in_array($key, $path_array)){
+        $active_category = $key;
+        break;
+    }
+}
+echo '<script> console.log("active_cat:'.$active_category.'") </script>';
+?>
+
+<?php include 'header.php' ?>
 
 <header>
     <?php include 'parts/menu.php'; ?>
 </header>
-<div class=" main-layer">
+<div class="main-layer">
 <!-- scroll menu   -->
 
 
     <div class="page-group">
         <!-- 单个page ,第一个.page默认被展示-->
-        <div id="home" class="page page-current">
-            <?php include dirname(__FILE__).'/parts/home-page.php'; ?>
-        </div>
-
-        <!-- 其他的单个page内联页（如果有） -->
-        <div id="australia" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="sydney" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="melbourne" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="brisbane" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="video" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="finance" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="realestate" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="national" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="china" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="hongkong" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="entertainment" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="sport" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="fashion" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
-        <div id="work" class="page">
-            <?php include dirname(__FILE__).'/parts/category-page.php'; ?>
-        </div>
+        <?php
+            foreach($categories as $key => $value){
+                ?>
+                <div id="<?php echo $key; ?>" class="page <?php echo $key == $active_category? 'page-current' : ''; ?>">
+                    <?php
+                    if ($key == 'home'){
+                        include dirname(__FILE__).'/parts/home-page.php';
+                    }else{
+                        include dirname(__FILE__).'/parts/category-page.php';
+                    }
+                    ?>
+                </div>
+                <?php
+            }
+        ?>
     </div>
 
     <!-- popup, panel 等放在这里 -->

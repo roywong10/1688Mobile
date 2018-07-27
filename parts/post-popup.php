@@ -68,15 +68,16 @@
         <div class="post-option-block">
             <p>字体大小</p>
             <p class="buttons-row">
-                <a href="#" class="button font-size-option small" style="font-size: 14px">小</a>
-                <a href="#" class="button font-size-option mid active" style="font-size: 16px">中</a>
-                <a href="#" class="button font-size-option large" style="font-size: 18px">大</a>
+                <a href="#" class="button font-size-option small" target="1" style="font-size: 14px">小</a>
+                <a href="#" class="button font-size-option mid active" target="2" style="font-size: 16px">中</a>
+                <a href="#" class="button font-size-option large" target="3" style="font-size: 18px">大</a>
             </p>
         </div>
         <div class="post-option-block">
             <p>简繁切换</p>
-            <p>
-                <a id="translateLink" class="button" href="javascript:translatePage();">简体</a>
+            <p class="buttons-row">
+                <a class="translateLink button active" target="1" href="#">简体</a>
+                <a class="translateLink button" target="2" href="#">繁体</a>
             </p>
         </div>
 
