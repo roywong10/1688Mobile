@@ -76,13 +76,13 @@ if($type == '2' && isset($_GET['id']) and isset($_GET['type']) and isset($_GET['
 
 if($type == '3' && isset($_GET['id']) and isset($_GET['type']) and isset($_GET['title']) and isset($_GET['origin']) and isset($_GET['date']) and isset($_GET['views'])) {
     ?>
-    <div class="card costume-card-1 costume-card-2" title="post-<?php echo htmlspecialchars($_GET['id']); ?>">
+    <div class="card costume-card-1 costume-card-2 open-content-popup" title="post-<?php echo htmlspecialchars($_GET['id']); ?>">
         <div class="card-header-costume">
             <div class="item-title-row">
                 <div class="item-title"><?php echo htmlspecialchars($_GET['title']); ?></div>
             </div>
         </div>
-        <div class="card-content open-content-popup">
+        <div class="card-content">
             <div class="list-block media-list">
                 <ul>
                     <li class="item-content">

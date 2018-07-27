@@ -67,6 +67,24 @@ a {
     background-size: 100% 75%;
 }
 
+.bottm-bar-icon.share{
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    background: transparent url("assets/images/icons/share_fill.svg") no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.bottm-bar-icon.message{
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    background: transparent url("assets/images/icons/message_fill.svg") no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
 .nav-indicator {
     position: absolute;
     top: 1.8rem;
@@ -427,4 +445,8 @@ div.scrollmenu .tab-button{
 
 .list-block .item-inner+.item-media {
     margin-right: .75rem;
+}
+
+.post-option-block .button {
+    font-size: .965rem;
 }

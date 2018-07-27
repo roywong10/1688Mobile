@@ -7,7 +7,7 @@
     </a>
     <div class="menu-canvas">
         <div style="position: fixed;top: 0; left: 0; height: 2.2rem; width: .75rem;background-image: linear-gradient(to right, white, transparent)"></div>
-        <div style="position: fixed;top: 0; right: 2.2rem; height: 2.2rem; width: .75rem;background-image: linear-gradient(to left, #eee , white 30%, transparent)"></div>
+        <div style="position: fixed;top: 0; right: 2.2rem; height: 2.2rem; width: .75rem;background-image: linear-gradient(to left, #ddd , white 30%, transparent)"></div>
         <div style="position: fixed;top: 0; right: 2.2rem; height: 2.2rem; width: .75rem;background-image: linear-gradient(to top, white , transparent 20%, transparent 80%, white )"></div>
         <div class="nav-indicator"></div>
     </div>

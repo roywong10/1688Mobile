@@ -1,5 +1,6 @@
 
 // defines
+var baseUrl = document.location.origin;
 var ajax_in_progress = false;
 var theme_dark = false;
 var default_font_size = 16;
@@ -26,7 +27,8 @@ translateInitilization();
 
 $(document).ready(function () {
     console.log($.device);
-    default_font_size = 14 * ($(window ).width() / 320);
+    default_font_size = 15 * ($(window ).width() / 320);
+    default_font_size = default_font_size <= 20? default_font_size : 20;
     small_font_size = default_font_size * 0.85;
     large_font_size = default_font_size * 1.15;
     $('html,body, .font-size-option.mid').css('font-size', default_font_size + 'px');
@@ -44,6 +46,13 @@ $('.scrollmenu').on('ready',function () {
     nav_indicator_width = active_pill_width / 5;
     nav_indicator_left = active_pill_left + (active_pill_width / 2) - (nav_indicator_width / 2);
     nav_indicator.css({left : nav_indicator_left+'px', width : nav_indicator_width+'px'});
+
+    var ele = $('.scrollmenu .menu-pills.active');
+    var ele_offset_left = ele.offset().left;
+    var ele_left = ele_offset_left + $(".scrollmenu").scrollLeft();
+    var target_x = ele_left - ($(window).width() / 2) + (ele.width() / 2);
+    target_x = (target_x >= 0)? target_x : 0;
+    smoothScroll($(".scrollmenu"), target_x, 300);
 });
 
 
@@ -241,7 +250,7 @@ $(document).on("pageInit",".main-layer .page-group>.page", function () {
 // functions
 function changeURL(pointer){
     var url = pointer.attr('id');
-    window.history.pushState({},0,'http://'+window.location.host+'/'+url);
+    window.history.pushState({},0,'http://'+window.location.host+'/mobile/'+url);
 }
 // this function must be defined in the global scope
 window.toggle_theme = function() {
@@ -309,7 +318,7 @@ function smoothScroll(el, to, duration) {
 
 function addItems(ele,number, lastId) {
     // 生成新条目的HTML
-    var baseUrl = document.location.origin;
+
     $.ajax({
         async : false,
         type: 'GET',

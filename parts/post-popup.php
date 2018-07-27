@@ -103,8 +103,8 @@
     <div class="pull-right right-buttons">
             <table>
                 <tr>
-                    <td align="center"><embed src="assets/images/icons/share_fill.svg"></td>
-                    <td align="center"><embed src="assets/images/icons/message_fill.svg"></td>
+                    <td align="center"><span class="bottm-bar-icon share"></span></td>
+                    <td align="center"><span class="bottm-bar-icon message"></span></td>
                 </tr>
                 <tr>
                     <td align="center">分享</td>
